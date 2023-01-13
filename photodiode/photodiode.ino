@@ -1,4 +1,4 @@
-const int TIME_DELAY = 6;
+const int TIME_DELAY = 1;
 const int MIN_LIGHT_INTENSITY = 10;
 
 bool is_idle = true; // RX is idle by default
