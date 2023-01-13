@@ -1,8 +1,12 @@
 import serial
 
+FILENAME = 'received_data.txt'
+SERIAL_PORT = '/dev/cu.usbmodem101'
+BAUD = 9600
+
 # Read and write to file
-with open("index.html", 'w') as f:
-	with serial.Serial('/dev/cu.usbmodem101', 9600, timeout=1) as ser:
+with open(FILENAME, 'w') as f:
+	with serial.Serial(SERIAL_PORT, BAUD, timeout=1) as ser:
 		while True: # Infinite loop
 			serial_input = ser.read(1)        # read up to ten bytes (timeout)
 			if serial_input != b"":
